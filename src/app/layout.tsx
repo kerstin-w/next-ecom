@@ -1,6 +1,7 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
+import { Inter } from 'next/font/google';
+import type { Metadata } from 'next';
+import { APP_DESCRIPTION, APP_NAME, SERVER_URL } from '@/lib/constans';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -8,9 +9,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Prostore',
-  description:
-    'A modern ecommerce platform built with Next.js and Tailwind CSS',
+  title: {
+    default: APP_NAME,
+    template: `%s | Prostore`,
+  },
+  description: APP_DESCRIPTION,
+  metadataBase: new URL(SERVER_URL),
   icons: {
     icon: '/favicon.ico',
   },
