@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { APP_NAME } from '@/lib/constans';
+import Header from '@/components/shared/header';
 
 export const metadata: Metadata = {
   title: `${APP_NAME} | Ecommerce`,
@@ -17,6 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <div className="flex h-screen flex-col">
+      <Header />
       <main className="flex-1 wrapper">{children}</main>
     </div>
   );
