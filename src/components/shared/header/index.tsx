@@ -29,7 +29,7 @@ const Header = () => {
               <span className="sr-only">Cart</span>
             </Link>
           </Button>
-          <Button asChild variant={'ghost'}>
+          <Button asChild size="icon">
             <Link href="/sign-in">
               <UserIcon />
               <span className="sr-only">Sign In</span>
